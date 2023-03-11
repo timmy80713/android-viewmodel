@@ -11,6 +11,7 @@ buildscript {
 
         // Koin
         koinVersion = '3.3.3'
+        koinAnnotationVersion = "1.1.1"
 
         // Kotin
         kotlinVersion = '1.7.21'
@@ -21,8 +22,13 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.4.2"
+        classpath "com.google.gms:google-services:4.3.15"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
+}
+
+plugins {
+    id("com.google.devtools.ksp") version '1.7.21-1.0.8'
 }
 
 allprojects {
